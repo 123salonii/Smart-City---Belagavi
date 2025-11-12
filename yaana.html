@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #f8d7db, #e7e3f2); /* Soft pastel gradient */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Full-width Image */
+        .img-container {
+            width: 100%;
+            height: 300px;
+            background-image: url('auto.jpg'); /* Replace with your bus image */
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 2s forwards; /* Fade-in effect */
+        }
+
+        /* Fade-in Effect for Image */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Box Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
+            gap: 20px;
+            opacity: 0;
+            animation: fadeInUp 1.5s 1s forwards; /* Boxes fade in with a delay */
+        }
+
+        /* Animation for Box Appearance */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .train-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out forwards, bounceIn 1s 0.5s forwards;
+        }
+
+        /* Bounce Animation */
+        @keyframes bounceIn {
+            0% {
+                transform: translateY(20px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .train-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+            color: #333;
+        }
+
+        .stars {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .stars i {
+            color: #FFD700; /* Gold color for stars */
+        }
+
+        .location {
+            text-decoration: none;
+            color: #4CAF50;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        .location img {
+            margin-right: 8px;
+        }
+
+        /* Hover Effects */
+        .train-box:hover {
+            transform: translateY(-10px); /* Card lift effect on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slight shadow effect on hover */
+        }
+
+        .stars a {
+            text-decoration: none;
+        }
+
+        .location:hover {
+            color: #2e7d32; /* Darker green on hover */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .train-box {
+                width: 220px;
+            }
+            .train-box h3 {
+                font-size: 1.4rem;
+            }
+
+            /* Stack the boxes on smaller screens */
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 boxes in each row */
+            }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Main Image -->
+    <div class="img-container"><img src="yana.jpg" alt=""></div>
+
+    <!-- Grid of Boxes -->
+    <div class="grid-container">
+        <!-- 8 Boxes with Information -->
+        <div class="train-box">
+            <h3>Yaana Point 1</h3>
+            <div class="stars">
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                (3.5)
+            </div>
+            <a href="https://maps.app.goo.gl/GN8YGVzTgECPbj3Y9" class="location"><img src="placeholder.jpg"  height="30px"> Opp Bemco Hydraulics,Belagum</a>
+        </div>
+
+        <div class="train-box">
+            <h3>Yaana Point 2</h3>
+            <div class="stars">
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                (4.0)
+            </div>
+            <a href="https://maps.app.goo.gl/9b3LPGnkFvvkeNGN7" class="location"><img src="placeholder.jpg"  height="30px"> Hanuman Nagar Circle,Belagum</a>
+        </div>
+
+        <div class="train-box">
+            <h3>Yaana Point 3</h3>
+            <div class="stars">
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                (3.9)
+            </div>
+            <a href="https://maps.app.goo.gl/AheWU5j8g64J8HY68" class="location"><img src="placeholder.jpg"  height="30px"> APMC Road,Belagum</a>
+        </div>
+
+        <div class="train-box">
+            <h3>Yaana Point 4</h3>
+            <div class="stars">
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                (4.2)
+            </div>
+            <a href="https://maps.app.goo.gl/uDqbyQxbMCJ3nGZj6" class="location"><img src="placeholder.jpg"  height="30px"> Near KrishnaDevarya Circle,Belagum</a>
+        </div>
+
+        <div class="train-box">
+            <h3>Yaana Point 5</h3>
+            <div class="stars">
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                (3.0)
+            </div>
+            <a href="https://maps.app.goo.gl/SAaZYtGnTCuWixyW6" class="location"><img src="placeholder.jpg"  height="30px"> Rani Chennamma Circle,Belagum</a>
+        </div>
+
+        <div class="train-box">
+            <h3>Yaana Point 6</h3>
+            <div class="stars">
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                (5.0)
+            </div>
+            <a href="https://maps.app.goo.gl/34ep2wZcE3gdThRcA" class="location"><img src="placeholder.jpg"  height="30px"> Shree Nagar Garden,Belagum</a>
+        </div>
+
+        <div class="train-box">
+            <h3>Yaana Point 7</h3>
+            <div class="stars">
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                (4.0)
+            </div>
+            <a href="https://maps.app.goo.gl/mQsYwczrMZ978TYHA" class="location"><img src="placeholder.jpg"  height="30px"> Tilkwadi First Gate,Belagum</a>
+        </div>
+
+        <div class="train-box">
+            <h3>Yaana Point 8</h3>
+            <div class="stars">
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                <a href="#"><i class='bx bxs-star'></i></a>
+                (3.6)
+            </div>
+            <a href="https://maps.app.goo.gl/WwKeH8h6rMaMgoKM6" class="location"><img src="placeholder.jpg"  height="30px"> Jijamata Chowk Fort road,Belagum</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
