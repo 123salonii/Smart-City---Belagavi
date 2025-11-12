@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Places-to-eat</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 20px;
+      color: #2c3e50;
+      font-family: 'Poppins', sans-serif;
+      animation: fadeIn 2s ease-out;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      margin-top: 10px;
+      max-width: 800px;
+      font-family: 'Roboto', sans-serif;
+      animation: fadeIn 2s ease-out 0.5s;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 10px;
+      width: 90%;
+      margin-top: 30px;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      opacity: 0;
+      animation: bounceIn 1s ease-out forwards;
+    }
+
+    .card:nth-child(odd) {
+      animation-delay: 0.5s;
+    }
+
+    .card:nth-child(even) {
+      animation-delay: 1s;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateY(100%);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .card:hover .card-image {
+      transform: scale(1.1);
+    }
+
+    .card:hover .card-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Fade In animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Bounce In animation */
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Button Styling */
+    button {
+      background-color: #e67e22;  /* Orange color for the button */
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    /* Button Hover Effects */
+    button:hover {
+      background-color: #d35400;  /* Darker orange on hover */
+      transform: scale(1.1);  /* Slightly enlarge the button */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  /* Shadow for depth */
+    }
+
+    /* Button Active Effects */
+    button:active {
+      transform: scale(1.05);  /* Slightly smaller scale when clicked */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Lighter shadow when pressed */
+    }
+
+    /* Focus Effects */
+    button:focus {
+      outline: none;  /* Remove outline on focus */
+      box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.5);  /* Orange outline when focused */
+    }
+  </style>
+</head>
+<body>
+  <h1>Places to Eat</h1>
+  
+  <p class="description">
+    Your trip to Belagavi can get even more wholesome by trying their local cuisine. Here are some eateries that provide the best in terms of authentic flavors, unique dining experiences, and unforgettable meals.
+  </p>
+
+  <div class="card-container">
+    
+    <div class="card">
+      <img src="https://www.goindigo.in/content/dam/skyplus6e/in/en/assets/Destinations/Belagavi/Niyaaz%20Medium.jpeg" alt="" class="card-image">
+      <div class="card-content">
+        <h2>Niyaaz</h2>
+        <p>
+            <strong>Niyaaz</strong> is renowned for its authentic Belagavi biryani crafted with fragrant Basmati rice, tender chunks of meat, and a blend of traditional spices and vegetables. Popular dishes: Belagavi biryani and Kababs.<br><a href="https://maps.app.goo.gl/vMmp7eqyboPMrHBU9"><button>Visit</button></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.goindigo.in/content/dam/skyplus6e/in/en/assets/Destinations/Belagavi/New%20Grand%20Restaurant%20Medium.jpeg" alt="" class="card-image">
+      <div class="card-content">
+        <h2>New Grand Restaurant</h2>
+        <p>
+          <strong>New Grand Restaurant</strong> offers diverse North Indian and South Indian delicacies in a charming setting. Indulge in their delicious food while enjoying their excellent service and inviting ambience. Popular dishes: Dosa, Idli, and crunchy kurma poori.<br><a href="https://maps.app.goo.gl/xQzBaMTeB2rP1osC7"><button>Visit</button></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.goindigo.in/content/dam/skyplus6e/in/en/assets/Destinations/Belagavi/Tumkur%20Tatte%20Idli%20Medium.jpeg" alt="" class="card-image">
+      <div class="card-content">
+        <h2>Tumkur Tatte Idli</h2>
+        <p>
+          <strong>Tumkur Tatte Idli</strong> is a popular destination for street food enthusiasts. Their signature dish, the thatte idli, is a must-try, offering a unique and delicious culinary experience. Popular dishes: Thatte idli.<br><a href="https://maps.app.goo.gl/j3zReqegZ8DVycY17"><button>Visit</button></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.goindigo.in/content/dam/skyplus6e/in/en/assets/Destinations/Belagavi/Paratha%20Corner%20Medium.jpeg" alt="" class="card-image">
+      <div class="card-content">
+        <h2>Paratha Corner</h2>
+        <p>
+          For lovers of North Indian cuisine, Paratha Corner is a must-visit. It provides an extensive menu featuring a variety of parathas with different fillings. Popular dishes: Aloo paratha and paneer paratha.<br><a href="https://maps.app.goo.gl/XSc2kjsUpxRKuJdK6"><button>Visit</button></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.goindigo.in/content/dam/skyplus6e/in/en/assets/Destinations/Belagavi/Ajanta%20Cafe%20Medium.jpeg" alt="" class="card-image">
+      <div class="card-content">
+        <h2>Ajanta Cafe</h2>
+        <p>
+          <strong>Ajanta Cafe</strong> is one of the most prominent vegetarian restaurants in Belagavi, where you can try several different cuisines all in one place. Popular dishes: Chhole bhatoore, dosa, and puri bhaji.<br><a href="https://maps.app.goo.gl/PLtUC5E3zcxvYhUN6"><button>Visit</button></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.goindigo.in/content/dam/skyplus6e/in/en/assets/Destinations/Belagavi/Eats%20n%20Treats%20Medium.jpeg" alt="" class="card-image">
+      <div class="card-content">
+        <h2>Eats n Treats</h2>
+        <p>
+          <strong>Eats n Treats</strong> is a popular restaurant known for its delicious food and comfortable ambience. It is known for its quality food, generous portions, and friendly service. Popular dishes: Papritos pizza, quattro formaggi pizza, and cheese chilli toast.<br><a href="https://maps.app.goo.gl/rvKys6uNR7K8oyCr5"><button>Visit</button></a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

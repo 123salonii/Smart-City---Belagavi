@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waterfalls</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    /* Header and description styling */
+    h1 {
+      font-size: 3rem;
+      margin-top: 20px;
+      color: #2c3e50; /* Dark Blue color */
+      font-family: 'Lora', serif; /* Elegant Serif font */
+      animation: fadeInUp 1.5s ease-out; /* Fade-in and slide-up animation */
+    }
+
+    p.description {
+      font-size: 1.2rem;
+      color: #7f8c8d; /* Lighter gray color */
+      margin-top: 10px;
+      max-width: 800px;
+      font-family: 'Open Sans', sans-serif; /* Clean sans-serif font */
+      animation: fadeInUp 2s ease-out; /* Fade-in and slide-up animation */
+      animation-delay: 0.5s; /* Delay the animation slightly for better visual effect */
+    }
+
+    /* Flex container to display images in a row */
+    .card-container {
+      display: flex;
+      flex-wrap: nowrap; /* Prevent wrapping */
+      gap: 20px;
+      padding: 10px;
+      width: 90%;
+      margin-top: 30px;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 300px; /* Fixed height */
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateY(100%);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .card:hover .card-image {
+      transform: scale(1.1);
+    }
+
+    .card:hover .card-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* General button styles */
+    button {
+      background-color: #4CAF50; /* Green background */
+      color: white; /* White text color */
+      font-size: 1rem; /* Font size */
+      padding: 10px 20px; /* Padding inside the button */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Cursor to indicate clickable */
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+    }
+
+    /* Hover effect for the button */
+    button:hover {
+      background-color: #45a049; /* Darker green when hovering */
+      transform: scale(1.05); /* Slightly enlarge the button */
+    }
+
+    /* Focus effect for accessibility */
+    button:focus {
+      outline: none; /* Remove default focus outline */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a box shadow when the button is focused */
+    }
+
+    /* Keyframe animations for fadeInUp */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <h1>Discover The Glorious Cascade</h1>
+  
+  <!-- Description -->
+  <p class="description">
+    Belagavi is home to stunning waterfalls, including the picturesque Gokak Falls and the serene Magod Falls. These natural wonders offer breathtaking views and are perfect spots for nature lovers and adventure enthusiasts alike.
+  </p>
+
+  <!-- Card container -->
+  <div class="card-container">
+    
+    <div class="card">
+      <img src="./img/w1.jpg" alt="" class="card-image">
+      <div class="card-content">
+        <h2>Tilari Waterfall</h2>
+        <p>
+            The closest waterfalls to the city of Belgaum, the Tilari Falls are a true gift of nature. The emerald waters of the waterfalls, and the short plunge give make the whole place absolutely picture perfect. Swimming is a popular activity here and those who love water cannot resist jumping in the clean, emerald pool formed at the bottom of the waterfall.<br><a href="https://maps.app.goo.gl/rS8n18UoFPz1CjtV6"><button>Explore</button></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+        <img src="./img/w2.jpg" alt="" class="card-image">
+        <div class="card-content">
+          <h2>Kalasa Falls</h2>
+          <p>
+            Located a short distance from Shimbola Falls, the Kalasa falls are more of a mainstream tourist destination. The reason is that this waterfall is accessible by road and there is no hiking involved. However, less effort in reaching the waterfall says nothing about its amazing beauty. The waterfall is just as picturesque as any other on this list and offers a special advantage: the freedom to take a dip in the fresh water!.<br><a href="https://maps.app.goo.gl/kmv2rc2T9oSakHCc9"><button>Explore</button></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/w3.jpg" alt="" class="card-image">
+        <div class="card-content">
+          <h2>Shimbola Waterfalls</h2>
+          <p>
+            Discovered rather recently, Shimbola Falls are accessible after a hike through the surrounding forest area. The hike distance is 12 kilometers and can take upto 5 hours.With that said, the hiking experience itself is superb. The trail goes through lush green forest and is dotted with awe inspiring views throughout the 12 kilometer stretch. At the end, the beauty of the waterfall will make matters even more magical.<br><a href="https://maps.app.goo.gl/HnRfzW5j7dQuYrBw8"><button>Explore</button></a>
+              
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/w4.jpg" alt="" class="card-image">
+        <div class="card-content">
+          <h2>VajraPoha Waterfall</h2>
+          <p>
+            Often lovingly called the gift of nature, the VajraPoha is a might waterfall with a drop height exceeding 600 feet. Thanks to this unreal height, the waterfall gets a dauntingly beautiful image that attracts hundreds of travelers. While witnessing the roaring waterfall and spending a few hours near the streams is a popular activity, the same should be undertaken with great caution, especially during the monsoon months when the flow of the water is relentless.<br><a href="https://maps.app.goo.gl/9oB6vBVeVWWu3H1B7"><button>Explore</button></a>
+          </p>
+        </div>
+      </div>
+      
+  </div>
+
+</body>
+</html>
+

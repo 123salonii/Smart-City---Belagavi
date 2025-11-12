@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Smart City Traveller</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 16px;
+        }
+
+        /* About Container */
+        .about-container {
+            background-color: #ffffff;
+            width: 80%;
+            max-width: 1200px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            color: #2196F3; /* Blue shade */
+        }
+
+        header p {
+            font-size: 20px;
+            color: #666;
+        }
+
+        /* Content Section */
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Button Styles */
+        button {
+            background-color: #2196F3; /* Blue shade */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1976D2; /* Darker blue shade on hover */
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Close Button */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .close:hover {
+            color: #2196F3; /* Change color on hover to blue */
+            transform: scale(1.2); /* Slightly enlarge the button on hover */
+            box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.7); /* Blue shadow on hover */
+        }
+
+        .close:active {
+            transform: scale(0.95); /* Slightly shrink the button on click */
+            box-shadow: 0px 0px 15px rgba(33, 150, 243, 0.9); /* Enhanced shadow on click */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <header>
+            <h1>About Smart City Traveller</h1>
+            <p>Welcome to Smart City Traveller, your digital guide to exploring the world’s most innovative cities.</p>
+        </header>
+
+        <section class="content">
+            <h2>Welcome to the Future of Travel!</h2>
+            <p>
+                As urban landscapes evolve, Smart Cities are transforming the way we live, work, and travel. Smart City Traveller is dedicated to providing you with the best travel experiences in cities that embrace technology, sustainability, and modern conveniences.
+                Our mission is to guide you through the most innovative cities, offering the latest information about smart infrastructure, green spaces, and cultural hotspots, all designed to make your travel experience seamless and enjoyable.
+            </p>
+            <p>
+                In Belagavi, as part of India’s Smart Cities Mission, the city is rapidly transforming into a digital hub. With new urban projects, smart transportation systems, and sustainable tourism initiatives, Belagavi offers a futuristic experience for every traveler.
+            </p>
+
+            <h3>What Makes Belagavi a Smart City?</h3>
+            <ul>
+                <li><strong>Smart Transportation:</strong> Enjoy efficient, eco-friendly public transport systems integrated with digital ticketing and real-time tracking.</li>
+                <li><strong>Smart Infrastructure:</strong> With upgraded roads, smart street lighting, and modernized utilities, Belagavi ensures an optimized experience for its residents and visitors.</li>
+                <li><strong>Sustainability:</strong> The city focuses on sustainable tourism by promoting eco-friendly accommodations, waste management, and green spaces.</li>
+                <li><strong>Smart Tourism:</strong> Visitors can use digital platforms to explore attractions, book tickets, and navigate the city with ease.</li>
+            </ul>
+
+            <button id="infoButton">Learn More About Smart City Initiatives</button>
+        </section>
+
+        <div id="moreInfoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>More About Belagavi's Smart City Initiatives</h2>
+                <p>
+                    Belagavi's Smart City initiatives are designed to create a sustainable, high-tech urban environment that fosters inclusivity, innovation, and growth. With the integration of IoT (Internet of Things), artificial intelligence, and big data, Belagavi is becoming a model for other cities looking to embark on the smart city journey.
+                    <br><br>
+                    Key features of Belagavi's smart city initiatives include:
+                    <ul>
+                        <li>Smart waste management systems using sensors for real-time monitoring and waste collection optimization.</li>
+                        <li>Public Wi-Fi zones that offer high-speed internet access across the city.</li>
+                        <li>Smart healthcare services with telemedicine, digital clinics, and health monitoring systems.</li>
+                        <li>Green spaces and eco-friendly parks designed for relaxation and recreation, with smart irrigation systems.</li>
+                    </ul>
+                    Belagavi is not just a place to visit; it's a glimpse into the future of urban living, where technology and sustainability go hand in hand.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get modal and button elements
+        var modal = document.getElementById("moreInfoModal");
+        var btn = document.getElementById("infoButton");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Open the modal when the button is clicked
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Close the modal when the close button is clicked
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

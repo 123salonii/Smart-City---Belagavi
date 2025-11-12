@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Services</title>
+    <style>
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f8ff; /* Light blue background */
+    color: black;
+    flex-direction: column;
+    animation: backgroundAnimation 5s ease-in-out infinite alternate; /* Background color animation */
+}
+
+/* Heading Styles */
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers the text horizontally */
+    text-align: center; /* Ensures the heading is aligned in the center */
+    margin-top: 20px;
+    animation: fadeInUp 2s ease-out; /* Animation for whole heading */
+}
+
+.heading h1 {
+    font-size: 50px;
+    color: #4CAF50; /* Green color */
+    padding: 5px;
+    animation: fadeInLeft 2s ease-out; /* Animation for H1 */
+}
+
+.heading h2 {
+    font-size: 45px;
+    padding: 5px;
+    color: greenyellow;
+    animation: fadeInRight 2s ease-out; /* Animation for H2 */
+}
+
+/* Keyframe Animations */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #f0f8ff; /* Light Blue */
+    }
+    50% {
+        background-color: #e6ffe6; /* Light Green */
+    }
+    100% {
+        background-color: #f0f8ff; /* Light Blue */
+    }
+}
+
+/* Main container styles */
+.container {
+    margin: 100px auto;
+    width: 85%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white; /* Background for each container */
+    border-radius: 10px; /* Rounded corners for each container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: containerAnimation 2s ease-out; /* Animation for container appearance */
+}
+
+.container img {
+    max-width: 350px;
+    width: 400px;
+    height: 350px;
+    float: left;
+    border-radius: 10px;
+    border: 3px solid white;
+    margin-right: 20px;
+}
+
+/* Text styling */
+.text h2 {
+    font-size: 50px;
+    padding: 5px;
+}
+
+.text p {
+    font-size: 18px;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Animation for container appearance */
+@keyframes containerAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  </style>
+</head>
+<body>
+    <div class="main">
+        <div class="heading">
+            <h1>Emergency Services</h1><br>
+            <h3>In case of any urgent situations, Belagavi offers prompt and reliable emergency services.From medical assistance to <br> fire and police support, help is just a call away, ensuring the safety and well-being of residents and visitors alike.</h3>
+        </div>
+
+    <div class="container">
+        <img src="./img/h1.jpg" alt="">
+        <div class="text">
+            <h2>Hospital</h2>
+            <p>
+              <ul>
+                <li>
+                    Kasbekar Metgud Clinic Multispeciality Hospital:<ul><li> Call : 8867080045</li>
+                  <li> <a href= "https://maps.app.goo.gl/29CKyBG2vrRVVRkz8"><button>LOCATION</button></a></li></ul></li>
+
+                  <li>
+                    Venugram Hospital:<ul><li> Call : 9108916333,0831-2413333</li>
+                  <li> <a href= "https://maps.app.goo.gl/UBz1b7zve9Fb9yNq6"><button>LOCATION</button></a></li></ul></li>
+
+                  <li>
+                    Spandan Superspeciality Hospital:<ul><li> Call : 09902895587</li>
+                  <li> <a href= "https://maps.app.goo.gl/ivoSiV7NAuQUKXvMA"><button>LOCATION</button></a></li></ul></li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="./img/h2.jpg" alt="">
+        <div class="text">
+            <h2>Fire Brigade</h2>
+            <p>Fire Brigade:<ul><li> Call : 0831 242 5441</li>
+              <li> <a href= "https://maps.app.goo.gl/HSpJ7MXDQ8Kp9imv5"><button>LOCATION</button></a></li></ul></p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="./img/h3.jpg" alt="">
+        <div class="text">
+            <h2>Police Station</h2>
+            <p><ul>
+              <li>
+                 BELAGAVI POLICE HEADQUARTERS:<ul><li> Call : 0831 242 7103</li>
+                <li> <a href= "https://maps.app.goo.gl/4KuXzEvfb4Y5E9hA6"><button>LOCATION</button></a></li></ul></li>
+ 
+                 <li>
+                     Tilakwadi Police Station:<ul><li> Call : 094808 04052 </li>
+                <li> <a href= "https://maps.app.goo.gl/KEQfRVH1Nupi6BG48"><button>LOCATION</button></a></li></ul></li>
+ 
+                
+              <li>
+                 Udyambag Police Station:<ul><li> Call : 0831 240 5238 </li>
+                <li> <a href= "https://maps.app.goo.gl/Mt4CpGsnRwsUvtuC6"><button>LOCATION</button></a></li></ul></li>
+ 
+              </p>
+        </div>
+    </div>
+    
+
+    
+    
+
+
+</body>
+</html>

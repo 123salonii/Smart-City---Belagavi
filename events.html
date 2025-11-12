@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif; /* Modern font family */
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #D4E1F2, #FFB6C1); /* Soft gradient background */
+            color: #ffffff; /* White text color */
+            flex-direction: column;
+            font-size: 18px;
+        }
+
+        /* Heading Styles */
+        .heading {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .heading h1 {
+            font-size: 50px;
+            padding: 5px;
+            color: #8A2BE2; /* Vibrant Purple */
+            animation: bounceIn 1.5s ease-out;
+            font-family: 'Roboto', sans-serif; /* Roboto font for main heading */
+            transition: color 0.5s ease;
+        }
+
+        .heading h1:hover {
+            color: #FF6347; /* Tomato Red on hover */
+        }
+
+        .heading h2 {
+            font-size: 45px;
+            padding: 5px;
+            color: #4682B4; /* Steel Blue */
+            animation: fadeInAnimation 2s ease-out;
+            font-family: 'Roboto', sans-serif; /* Roboto font for subheading */
+            transition: color 0.5s ease;
+        }
+
+        .heading h2:hover {
+            color: #32CD32; /* Lime Green on hover */
+        }
+
+        /* Container Styles */
+        .container {
+            margin: 50px auto;
+            width: 85%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            background-color: #2F4F4F; /* Dark Slate Gray background */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        img {
+            max-width: 350px;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            border: 3px solid white;
+            margin-right: 20px;
+        }
+
+        /* Change color and animation for h2 tag inside container */
+        .container h2 {
+            font-size: 30px;
+            padding: 5px;
+            color: #008B8B; /* Dark Cyan color */
+            font-family: 'Roboto', sans-serif; /* Font for event titles inside containers */
+            animation: fadeInFromLeft 1s ease-out; /* Animation for fade-in effect */
+        }
+
+        .container h2:hover {
+            color: #00CED1; /* Dark Turquoise on hover */
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #f0f0f0; /* Light gray color for paragraph */
+        }
+
+        /* Button Styles */
+        button {
+            background-color: #1E90FF; /* Bright Blue */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Button Hover Effect */
+        button:hover {
+            background-color: #4682B4; /* Darker Blue */
+            transform: translateY(-5px); /* Slightly raise the button */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+        }
+
+        /* Button Animation */
+        button:active {
+            transform: scale(0.98); /* Shrink slightly when clicked */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow when clicked */
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+                margin: 20px auto;
+            }
+
+            .container img {
+                margin-bottom: 15px;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .heading h1 {
+                font-size: 40px;
+            }
+
+            .heading h2 {
+                font-size: 35px;
+            }
+
+            button {
+                width: 100%;
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Discover the events to join..</h1><br>
+        <h2>Tech</h2>
+    </div>
+
+    <div class="container">
+        <img src="./img/event1.jpg" alt="">
+        <div class="text">
+            <h2>Globe-Tech Engineering Expo</h2>
+            <p>Globe-Tech Engineering Expo is one of India's largest SME gatherings on Engineering & Manufacturing products & services. GEE aims to promote the Indian Industry on an International standard by bringing manufacturers and end-users on this special forum. <br><a href="https://www.enggexpo.in/"><button>See more</button></a></p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="./img/event2.jpg" alt="">
+        <div class="text">
+            <h2>Devfest Belgaum 2024</h2>
+            <p>DevFest is a community-led tech conference hosted by Google Developer Groups (GDG), focusing on knowledge exchange, networking, and learning about Google technologies.<br><a href="https://gdg.community.dev/events/details/google-gdg-belgaum-presents-devfest-belgaum-2024/"><button>See more</button></a></p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="./img/event3.jpg" alt="">
+        <div class="text">
+            <h2>Yukti-2K24</h2>
+            <p>Yukti-2k24 is a 2-day national techno-cultural event, featuring technical, fun, management, and cultural events, including a live concert by Vijay Prakash.<br><a href="https://www.instagram.com/yukti_vtu/"><button>See more</button></a></p>
+        </div>
+    </div>
+
+    <div class="heading">
+        <h2>Non-Tech</h2>
+    </div>
+
+    <div class="container">
+        <img src="./img/event4.jpg" alt="">
+        <div class="text">
+            <h2>Poets of Belagavi</h2>
+            <p>Poets of Belagavi is a literary event showcasing poetry readings in multiple languages, promoting cultural exchange.<br><a href="https://www.instagram.com/p/C5gk6pxhblb/"><button>See more</button></a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="./img/event5.jpg" alt="">
+        <div class="text">
+            <h2>Fashionista Exhibition</h2>
+            <p>Fashionista brings grandeur, dignity, and gorgeousness to premium events across India, celebrating 15 years of success.<br><a href="https://www.instagram.com/p/C5gk6pxhblb/"><button>See more</button></a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="./img/event6.jpg" alt="">
+        <div class="text">
+            <h2>Rajyotsava</h2>
+            <p>Belagavi celebrates Karnataka Rajyotsava with a cultural program, honoring freedom fighters and historical figures.<br><a href="https://marvelousbelgaum.in/karnataka-rajyotsava-in-belagavi/"><button>See more</button></a></p>
+        </div>
+    </div>
+
+</body>
+</html>

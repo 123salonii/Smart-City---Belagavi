@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    /* Header and description styling */
+    h1 {
+      font-size: 3rem;
+      margin-top: 20px;
+      color: #2c3e50;
+      font-family: 'Montserrat', sans-serif; /* New font */
+      animation: fadeInUp 1.5s ease-out; /* Fade-in and slide-up animation */
+    }
+
+    p.description {
+      font-size: 1.2rem;
+      color: #7f8c8d;
+      margin-top: 10px;
+      max-width: 800px;
+      font-family: 'Open Sans', sans-serif; /* New font */
+      animation: fadeInUp 2s ease-out; /* Fade-in and slide-up with delay */
+      animation-delay: 0.5s; /* Delay the animation slightly for better visual effect */
+    }
+
+    /* Flex container to display images in a row */
+    .card-container {
+      display: flex;
+      flex-wrap: nowrap; /* Prevent wrapping */
+      gap: 20px;
+      padding: 10px;
+      width: 90%;
+      margin-top: 30px;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 300px; /* Fixed height */
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateY(100%);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .card:hover .card-image {
+      transform: scale(1.1);
+    }
+
+    .card:hover .card-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* General button styles */
+    button {
+      background-color: #3498db; /* Blue background */
+      color: white; /* White text color */
+      font-size: 1rem; /* Font size */
+      padding: 12px 25px; /* Padding inside the button */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Cursor to indicate clickable */
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    }
+
+    /* Hover effect for the button */
+    button:hover {
+      background-color: #2980b9; /* Darker blue when hovering */
+      transform: scale(1.1); /* Slightly enlarge the button */
+    }
+
+    /* Focus effect for accessibility */
+    button:focus {
+      outline: none; /* Remove default focus outline */
+      box-shadow: 0 0 15px rgba(52, 152, 219, 0.7); /* Add a glowing blue outline on focus */
+    }
+
+    /* Active effect when the button is pressed */
+    button:active {
+      background-color: #1f6fa4; /* Even darker blue when button is pressed */
+      transform: scale(1); /* Reset scale */
+    }
+
+    /* Keyframe animations for fadeInUp */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <h1>Shopping in Belagavi</h1>
+  
+  <!-- Description -->
+  <p class="description">
+    Explore the vibrant shopping scene of Belagavi, where you'll find everything from trendy apparel to local handicrafts, all under one roof. Enjoy a unique shopping experience with a variety of stores catering to every need and taste.
+  </p>
+
+  <!-- Card container -->
+  <div class="card-container">
+    
+    <div class="card">
+      <img src="./img/shop1.jpg" alt="" class="card-image">
+      <div class="card-content">
+        <h2>@Westside</h2>
+        <p>
+            Tammana Arcade, Belgaum, Karnataka 590001. Visiting hours are: <strong>Morning: 11:00 AM to Evening: 9:00 PM</strong><br>
+            <a href="https://maps.app.goo.gl/ZhSLQM1fL5uGorAi9"><button>Shop now</button></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+        <img src="./img/shop2.jpg" alt="" class="card-image">
+        <div class="card-content">
+          <h2>@Zudio</h2>
+          <p>
+            Kanakashree Plaza, Ayodhya Nagar, Sadashiv Nagar, Belagavi, Karnataka. Visiting hours are: <strong>Morning: 11:00 AM to Evening: 8:00 PM</strong><br>
+              <a href="https://maps.app.goo.gl/nMpY99JRLrfgNVoc8"><button>Shop now</button></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/shop3.jpg" alt="" class="card-image">
+        <div class="card-content">
+          <h2>@Value and Variety (V2)</h2>
+          <p>
+            10592/a/1, Nehru Nagar, Kolhapur Circle Belgaum, Belagavi, Karnataka 590010. Visiting hours are: <strong>Morning: 09:30 AM to Evening: 10:30 PM</strong>
+              <a href="https://maps.app.goo.gl/1RAERvFuawG98ZJi6"><button>Shop now</button></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/shop4.jpg" alt="" class="card-image">
+        <div class="card-content">
+          <h2>@Trends</h2>
+          <p>
+            CTS.No.1049, A3, Khanapur Rd, Tilakwadi, Belagavi, Karnataka. Visiting hours are: <strong>Morning: 11:00 AM to Evening: 9:30 PM</strong><br>
+              <a href="https://maps.app.goo.gl/8LkpQnLg9arPZXEfA"><button>Shop now</button></a>
+          </p>
+        </div>
+      </div>
+      
+  </div>
+
+</body>
+</html>
